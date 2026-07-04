@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* ---------- ABOUT ---------- */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
-        <SectionHeading kicker="About" title="Builder first, student second" />
+        <SectionHeading kicker="About" title="A bit about me" />
         <div className="mt-8 max-w-3xl">
           <Reveal delay={100}>
             <div className="space-y-5 text-lg leading-relaxed text-muted">
@@ -209,7 +209,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/40 to-bg" />
         </div>
         <div className="relative mx-auto max-w-6xl px-6">
-        <SectionHeading kicker="Projects" title="Things I've built" />
+        <SectionHeading kicker="Projects" title="Featured projects" />
         <div className="mt-10 space-y-6">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 80}>
@@ -271,7 +271,7 @@ export default function Home() {
 
       {/* ---------- EXPERIENCE ---------- */}
       <section id="experience" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
-        <SectionHeading kicker="Experience" title="Where I've worked" />
+        <SectionHeading kicker="Experience" title="Professional experience" />
         <div className="mt-10 space-y-12 border-l border-line pl-8">
           {experience.map((job, i) => (
             <Reveal key={job.role} delay={i * 100}>
@@ -296,7 +296,7 @@ export default function Home() {
 
       {/* ---------- SKILLS ---------- */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
-        <SectionHeading kicker="Skills" title="Tools of the trade" />
+        <SectionHeading kicker="Skills" title="Skills & technologies" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {skills.map((group, i) => (
             <Reveal key={group.group} delay={i * 80}>
@@ -329,7 +329,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/45 to-bg" />
         </div>
         <div className="relative mx-auto max-w-6xl px-6">
-        <SectionHeading kicker="Education" title="Where I learned the theory" />
+        <SectionHeading kicker="Education" title="Academic background" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {education.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
@@ -347,7 +347,7 @@ export default function Home() {
 
       {/* ---------- BEYOND CODE ---------- */}
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
-        <SectionHeading kicker="Beyond code" title="When I'm not shipping" />
+        <SectionHeading kicker="Beyond code" title="Photography & interests" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <Reveal delay={100}>
             <a
@@ -422,7 +422,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <Reveal>
             <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
-              Let&apos;s build something.
+              Get in touch
             </h2>
           </Reveal>
           <Reveal delay={100}>
