@@ -48,8 +48,10 @@ export default function Home() {
           />
           <div className="photo-bg-scrim" />
         </div>
-        <div className="aurora" />
         <div className="grid-overlay" />
+        <p className="photo-caption absolute right-5 bottom-5 z-10 hidden sm:block">
+          Adelaide at dusk · shot by me
+        </p>
         <div className="relative mx-auto w-full max-w-6xl px-6 pt-24 pb-16">
           <Reveal>
             <p className="mb-4 text-sm font-medium tracking-widest text-accent-2 uppercase">
@@ -139,7 +141,7 @@ export default function Home() {
       {/* ---------- ABOUT ---------- */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="About" title="Builder first, student second" />
-        <div className="mt-8 grid gap-10 md:grid-cols-5">
+        <div className="mt-8 grid items-start gap-10 md:grid-cols-5">
           <Reveal className="md:col-span-3" delay={100}>
             <div className="space-y-5 text-lg leading-relaxed text-muted">
               <p>
@@ -164,28 +166,50 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal className="md:col-span-2" delay={200}>
-            <div className="glow-card p-6">
-              <h3 className="font-display mb-4 text-lg font-semibold">
-                What I bring
-              </h3>
-              <ul className="space-y-3 text-sm leading-relaxed text-muted">
-                <li>
-                  <span className="text-ink">AI/LLM engineering depth</span> —
-                  RAG, vector search, multi-model routing, agentic workflows
-                </li>
-                <li>
-                  <span className="text-ink">Full-stack shipping ability</span>{" "}
-                  — Next.js, Node, SQL, from schema to pixel
-                </li>
-                <li>
-                  <span className="text-ink">Real business impact</span> — 30%
-                  time reduction on documentation workflows, automation in
-                  production at a 30+ person company
-                </li>
-              </ul>
+            <div className="group relative overflow-hidden rounded-2xl border border-line">
+              <Image
+                src="/photos/about.webp"
+                alt="City laneway between tall buildings, black and white — photo by Rafid Tahmid"
+                width={900}
+                height={1341}
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg/85 to-transparent p-4">
+                <p className="photo-caption">Melbourne laneways · shot by me</p>
+              </div>
             </div>
           </Reveal>
         </div>
+        <Reveal delay={150}>
+          <div className="glow-card mt-10 grid gap-6 p-6 sm:grid-cols-3 sm:p-8">
+            <div>
+              <h3 className="font-display text-base font-semibold text-ink">
+                AI/LLM engineering depth
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                RAG, vector search, multi-model routing, agentic workflows
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-base font-semibold text-ink">
+                Full-stack shipping ability
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Next.js, Node, SQL — from schema to pixel
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-base font-semibold text-ink">
+                Real business impact
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                30% time cut on documentation workflows, automation in
+                production at a 30+ person company
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* ---------- PROJECTS ---------- */}
@@ -309,12 +333,22 @@ export default function Home() {
       </section>
 
       {/* ---------- EDUCATION ---------- */}
-      <section id="education" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <section id="education" className="relative overflow-hidden py-16 sm:py-24">
+        <div className="photo-bg">
+          <Image
+            src="/bg/education.webp"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/45 to-bg" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading kicker="Education" title="Where I learned the theory" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {education.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
-              <div className="glow-card h-full p-7">
+              <div className="glass-card h-full p-7">
                 <p className="text-sm text-accent-2">{item.period}</p>
                 <h3 className="font-display mt-1 text-xl font-bold">{item.title}</h3>
                 <p className="mt-0.5 text-sm text-accent">{item.place}</p>
@@ -322,6 +356,7 @@ export default function Home() {
               </div>
             </Reveal>
           ))}
+        </div>
         </div>
       </section>
 
@@ -364,25 +399,25 @@ export default function Home() {
           </Reveal>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-          {photos.map((photo, i) => (
-            <Reveal key={photo.src} delay={i * 60}>
-              <a
-                href={links.pexels}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block aspect-[4/3] overflow-hidden rounded-xl border border-line"
-              >
-                <Image
-                  src={`${photo.src}?auto=compress&cs=tinysrgb&w=900`}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </a>
-            </Reveal>
+        <div className="mt-8 columns-2 gap-3 sm:columns-3 sm:gap-4 [&>*]:mb-3 sm:[&>*]:mb-4">
+          {photos.map((photo) => (
+            <a
+              key={photo.src}
+              href={links.pexels}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block overflow-hidden rounded-xl border border-line"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.w}
+                height={photo.h}
+                sizes="(max-width: 640px) 50vw, 33vw"
+                className="h-auto w-full transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </a>
           ))}
         </div>
       </section>

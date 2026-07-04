@@ -29,3 +29,6 @@ next-env.d.ts
 
 # personal source docs (not site content)
 *.docx
+
+# raw photo sources (processed copies live in public/)
+/photos/

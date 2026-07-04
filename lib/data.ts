@@ -176,30 +176,48 @@ export const education = [
   },
 ];
 
-export const photos: { src: string; alt: string }[] = [
+export const photos: { src: string; alt: string; w: number; h: number }[] = [
   {
-    src: "https://images.pexels.com/photos/37813391/pexels-photo-37813391.jpeg",
-    alt: "Ethereal jellyfish floating in tranquil waters",
+    src: "/photos/g-29677538.webp",
+    alt: "Golden sunset over Adelaide with a lone eucalyptus tree",
+    w: 900,
+    h: 675,
   },
   {
-    src: "https://images.pexels.com/photos/37373252/pexels-photo-37373252.jpeg",
-    alt: "Coastal road reflected in a car mirror",
+    src: "/photos/g-37434605.webp",
+    alt: "Telephone booth glowing red on a dark street at night",
+    w: 900,
+    h: 973,
   },
   {
-    src: "https://images.pexels.com/photos/37208027/pexels-photo-37208027.jpeg",
-    alt: "Sunlight through a tree canopy over a green valley at sunset",
+    src: "/photos/g-36801057.webp",
+    alt: "Symmetric corridor through a pine forest",
+    w: 900,
+    h: 1022,
   },
   {
-    src: "https://images.pexels.com/photos/36745085/pexels-photo-36745085.jpeg",
-    alt: "Forest at dawn with a beautiful sunrise",
+    src: "/photos/g-26180221.webp",
+    alt: "Looking up between city buildings, black and white",
+    w: 900,
+    h: 1145,
   },
   {
-    src: "https://images.pexels.com/photos/38344169/pexels-photo-38344169.jpeg",
-    alt: "Photography by Rafid Tahmid",
+    src: "/photos/g-30301846.webp",
+    alt: "Ornate coffered ceiling of a historic library",
+    w: 900,
+    h: 1165,
   },
   {
-    src: "https://images.pexels.com/photos/37434605/pexels-photo-37434605.jpeg",
-    alt: "Photography by Rafid Tahmid",
+    src: "/photos/g-30345626.webp",
+    alt: "Jetty stretching into the ocean, black and white",
+    w: 900,
+    h: 1218,
+  },
+  {
+    src: "/photos/g-36745301.webp",
+    alt: "City laneway between tall buildings, black and white",
+    w: 900,
+    h: 1341,
   },
 ];
 
