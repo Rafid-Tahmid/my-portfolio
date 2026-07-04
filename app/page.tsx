@@ -281,7 +281,17 @@ export default function Home() {
       </section>
 
       {/* ---------- EXPERIENCE ---------- */}
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <section id="experience" className="relative overflow-hidden py-16 sm:py-24">
+        <div className="photo-bg">
+          <Image
+            src="/bg/experience.webp"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/55 to-bg" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading kicker="Experience" title="Professional experience" />
         <div className="mt-10 space-y-12 border-l border-line pl-8">
           {experience.map((job, i) => (
@@ -302,6 +312,7 @@ export default function Home() {
               </div>
             </Reveal>
           ))}
+        </div>
         </div>
       </section>
 
