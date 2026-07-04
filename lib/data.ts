@@ -176,8 +176,35 @@ export const education = [
   },
 ];
 
+export const photos: { src: string; alt: string }[] = [
+  {
+    src: "https://images.pexels.com/photos/37813391/pexels-photo-37813391.jpeg",
+    alt: "Ethereal jellyfish floating in tranquil waters",
+  },
+  {
+    src: "https://images.pexels.com/photos/37373252/pexels-photo-37373252.jpeg",
+    alt: "Coastal road reflected in a car mirror",
+  },
+  {
+    src: "https://images.pexels.com/photos/37208027/pexels-photo-37208027.jpeg",
+    alt: "Sunlight through a tree canopy over a green valley at sunset",
+  },
+  {
+    src: "https://images.pexels.com/photos/36745085/pexels-photo-36745085.jpeg",
+    alt: "Forest at dawn with a beautiful sunrise",
+  },
+  {
+    src: "https://images.pexels.com/photos/38344169/pexels-photo-38344169.jpeg",
+    alt: "Photography by Rafid Tahmid",
+  },
+  {
+    src: "https://images.pexels.com/photos/37434605/pexels-photo-37434605.jpeg",
+    alt: "Photography by Rafid Tahmid",
+  },
+];
+
 export const interests = [
-  "Photography — 1.7M+ views on Pexels",
+  "Photography — 1.8M+ views on Pexels",
   "Aquarium & terrarium keeping",
   "Reading",
   "Emerging technology",

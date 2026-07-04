@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import {
@@ -12,6 +13,7 @@ import {
   experience,
   interests,
   links,
+  photos,
   projects,
   skills,
 } from "@/lib/data";
@@ -45,13 +47,13 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="font-display max-w-4xl text-5xl leading-[1.05] font-bold tracking-tight sm:text-7xl">
+            <h1 className="font-display max-w-4xl text-4xl leading-[1.08] font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.05]">
               Hi, I&apos;m <span className="gradient-text">Rafid Tahmid</span>.
               <br />I turn real problems into working software.
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
               Mathematical and Computer Science student at Adelaide University
               with hands-on experience shipping AI-driven automation and
               full-stack web apps — RAG pipelines, multi-model routing, and
@@ -104,14 +106,14 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={450}>
-            <div className="mt-16 grid max-w-2xl grid-cols-3 gap-4">
+            <div className="mt-12 grid max-w-2xl grid-cols-3 gap-3 sm:mt-16 sm:gap-4">
               {[
                 ["30%", "manual work cut via automation"],
                 ["96%", "score on uni full-stack project"],
-                ["1.7M+", "views on Pexels photography"],
+                ["1.8M+", "views on Pexels photography"],
               ].map(([stat, label]) => (
-                <div key={label} className="glow-card px-4 py-5 text-center sm:px-6">
-                  <div className="font-display gradient-text text-2xl font-bold sm:text-3xl">
+                <div key={label} className="glow-card px-3 py-4 text-center sm:px-6 sm:py-5">
+                  <div className="font-display gradient-text text-xl font-bold sm:text-3xl">
                     {stat}
                   </div>
                   <div className="mt-1.5 text-xs leading-snug text-muted sm:text-sm">
@@ -125,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* ---------- ABOUT ---------- */}
-      <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="about" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="About" title="Builder first, student second" />
         <div className="mt-8 grid gap-10 md:grid-cols-5">
           <Reveal className="md:col-span-3" delay={100}>
@@ -177,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* ---------- PROJECTS ---------- */}
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="Projects" title="Things I've built" />
         <div className="mt-10 space-y-6">
           {projects.map((project, i) => (
@@ -244,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* ---------- EXPERIENCE ---------- */}
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="experience" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="Experience" title="Where I've worked" />
         <div className="mt-10 space-y-12 border-l border-line pl-8">
           {experience.map((job, i) => (
@@ -269,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* ---------- SKILLS ---------- */}
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="skills" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="Skills" title="Tools of the trade" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {skills.map((group, i) => (
@@ -292,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* ---------- EDUCATION ---------- */}
-      <section id="education" className="mx-auto max-w-6xl px-6 py-24">
+      <section id="education" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="Education" title="Where I learned the theory" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {education.map((item, i) => (
@@ -309,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* ---------- BEYOND CODE ---------- */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="Beyond code" title="When I'm not shipping" />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <Reveal delay={100}>
@@ -326,7 +328,7 @@ export default function Home() {
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 My photos on Pexels have passed{" "}
-                <span className="gradient-text font-semibold">1.7 million views</span>.
+                <span className="gradient-text font-semibold">1.8 million views</span>.
                 Composition and attention to detail carry over directly into how
                 I build interfaces.
               </p>
@@ -346,10 +348,32 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
+
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          {photos.map((photo, i) => (
+            <Reveal key={photo.src} delay={i * 60}>
+              <a
+                href={links.pexels}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block aspect-[4/3] overflow-hidden rounded-xl border border-line"
+              >
+                <Image
+                  src={`${photo.src}?auto=compress&cs=tinysrgb&w=900`}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </a>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* ---------- CONTACT ---------- */}
-      <section id="contact" className="relative overflow-hidden py-28">
+      <section id="contact" className="relative overflow-hidden py-20 sm:py-28">
         <div className="aurora opacity-60" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <Reveal>
