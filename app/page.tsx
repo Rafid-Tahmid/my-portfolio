@@ -197,7 +197,7 @@ export default function Home() {
             fill
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/60 to-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/40 to-bg" />
         </div>
         <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading kicker="Projects" title="Things I've built" />
@@ -396,7 +396,7 @@ export default function Home() {
             fill
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/40 to-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/25 to-bg" />
         </div>
         <div className="aurora opacity-60" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
