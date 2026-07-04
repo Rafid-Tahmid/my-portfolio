@@ -141,8 +141,8 @@ export default function Home() {
       {/* ---------- ABOUT ---------- */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
         <SectionHeading kicker="About" title="A bit about me" />
-        <div className="mt-8 max-w-3xl">
-          <Reveal delay={100}>
+        <div className="mt-8 grid items-start gap-10 md:grid-cols-5">
+          <Reveal className="md:col-span-3" delay={100}>
             <div className="space-y-5 text-lg leading-relaxed text-muted">
               <p>
                 I&apos;m studying Mathematical and Computer Science at Adelaide
@@ -163,6 +163,21 @@ export default function Home() {
                 strict style rules. It taught me to write code other people
                 can read.
               </p>
+            </div>
+          </Reveal>
+          <Reveal className="md:col-span-2" delay={200}>
+            <div className="group relative overflow-hidden rounded-2xl border border-line">
+              <Image
+                src="/photos/g-26180221.webp"
+                alt="Looking up between city buildings, black and white — photo by Rafid Tahmid"
+                width={900}
+                height={1145}
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg/85 to-transparent p-4">
+                <p className="photo-caption">Shot by me</p>
+              </div>
             </div>
           </Reveal>
         </div>
