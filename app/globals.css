@@ -18,6 +18,28 @@ html {
   scroll-padding-top: 88px;
 }
 
+/* light theme overrides — utilities read these vars */
+html[data-theme="light"] {
+  --color-bg: #f6f6fb;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-line: #e2e2ef;
+  --color-ink: #17172b;
+  --color-muted: #585874;
+}
+html[data-theme="light"] .photo-bg img {
+  opacity: 0.22;
+}
+html[data-theme="light"] .aurora::before,
+html[data-theme="light"] .aurora::after {
+  opacity: 0.14;
+}
+html[data-theme="light"] .grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(23, 23, 43, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 23, 43, 0.06) 1px, transparent 1px);
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-ink);
