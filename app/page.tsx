@@ -38,15 +38,14 @@ export default function Home() {
 
       {/* ---------- HERO ---------- */}
       <section className="relative flex min-h-svh items-center overflow-hidden">
-        <div className="photo-bg photo-bg--duotone">
+        <div className="photo-bg">
           <Image
-            src="https://images.pexels.com/photos/37208027/pexels-photo-37208027.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/bg/hero.webp"
             alt=""
             fill
             priority
             sizes="100vw"
           />
-          <div className="duotone-tint" />
           <div className="photo-bg-scrim" />
         </div>
         <div className="aurora" />
@@ -193,13 +192,12 @@ export default function Home() {
       <section id="projects" className="relative overflow-hidden py-16 sm:py-24">
         <div className="photo-bg">
           <Image
-            src="https://images.pexels.com/photos/37373252/pexels-photo-37373252.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/bg/projects.webp"
             alt=""
             fill
             sizes="100vw"
-            className="saturate-[.7]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/75 to-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/60 to-bg" />
         </div>
         <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading kicker="Projects" title="Things I've built" />
@@ -393,13 +391,12 @@ export default function Home() {
       <section id="contact" className="relative overflow-hidden py-20 sm:py-28">
         <div className="photo-bg">
           <Image
-            src="https://images.pexels.com/photos/37813391/pexels-photo-37813391.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/bg/contact.webp"
             alt=""
             fill
             sizes="100vw"
           />
-          <div className="photo-bg-scrim" />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/40 to-bg" />
         </div>
         <div className="aurora opacity-60" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
