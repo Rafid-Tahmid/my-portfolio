@@ -68,6 +68,33 @@ body {
   to { transform: translate(-10vmax, -8vmax) scale(0.95); }
 }
 
+/* ---------- photo backgrounds ---------- */
+.photo-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.photo-bg img {
+  object-fit: cover;
+  animation: ken-burns 38s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+.photo-bg-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-bg) 55%, transparent) 0%, color-mix(in srgb, var(--color-bg) 78%, transparent) 55%, var(--color-bg) 100%),
+    linear-gradient(100deg, color-mix(in srgb, var(--color-bg) 82%, transparent) 25%, color-mix(in srgb, var(--color-bg) 35%, transparent) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-bg img { animation: none; }
+}
+
 /* subtle grid overlay */
 .grid-overlay {
   position: absolute;

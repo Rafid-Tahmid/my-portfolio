@@ -38,6 +38,16 @@ export default function Home() {
 
       {/* ---------- HERO ---------- */}
       <section className="relative flex min-h-svh items-center overflow-hidden">
+        <div className="photo-bg">
+          <Image
+            src="https://images.pexels.com/photos/37208027/pexels-photo-37208027.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className="photo-bg-scrim" />
+        </div>
         <div className="aurora" />
         <div className="grid-overlay" />
         <div className="relative mx-auto w-full max-w-6xl px-6 pt-24 pb-16">
@@ -374,6 +384,16 @@ export default function Home() {
 
       {/* ---------- CONTACT ---------- */}
       <section id="contact" className="relative overflow-hidden py-20 sm:py-28">
+        <div className="photo-bg">
+          <Image
+            src="https://images.pexels.com/photos/37813391/pexels-photo-37813391.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+          <div className="photo-bg-scrim" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg" />
+        </div>
         <div className="aurora opacity-60" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <Reveal>
