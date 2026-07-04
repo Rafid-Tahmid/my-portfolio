@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* ---------- HERO ---------- */}
       <section className="relative flex min-h-svh items-center overflow-hidden">
-        <div className="photo-bg">
+        <div className="photo-bg photo-bg--duotone">
           <Image
             src="https://images.pexels.com/photos/37208027/pexels-photo-37208027.jpeg?auto=compress&cs=tinysrgb&w=1920"
             alt=""
@@ -46,6 +46,7 @@ export default function Home() {
             priority
             sizes="100vw"
           />
+          <div className="duotone-tint" />
           <div className="photo-bg-scrim" />
         </div>
         <div className="aurora" />
@@ -189,18 +190,23 @@ export default function Home() {
       </section>
 
       {/* ---------- PROJECTS ---------- */}
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <section id="projects" className="relative overflow-hidden py-16 sm:py-24">
+        <div className="photo-bg">
+          <Image
+            src="https://images.pexels.com/photos/37373252/pexels-photo-37373252.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt=""
+            fill
+            sizes="100vw"
+            className="saturate-[.7]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/75 to-bg" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading kicker="Projects" title="Things I've built" />
         <div className="mt-10 space-y-6">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 80}>
-              <article
-                className={`glow-card p-7 sm:p-9 ${
-                  project.featured
-                    ? "bg-gradient-to-br from-card via-card to-surface"
-                    : ""
-                }`}
-              >
+              <article className="glass-card p-7 sm:p-9">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     {project.featured && (
@@ -252,6 +258,7 @@ export default function Home() {
               </article>
             </Reveal>
           ))}
+        </div>
         </div>
       </section>
 
